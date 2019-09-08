@@ -72,7 +72,7 @@ namespace CS321_W5D2_BlogAPI.Controllers
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("AddPost", "Fix Me! Implement POST /api/blogs{blogId}/posts");
+                ModelState.AddModelError("AddPost", ex.Message);
                 return BadRequest(ModelState);
             }
 
@@ -106,7 +106,7 @@ namespace CS321_W5D2_BlogAPI.Controllers
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("DeletePost", "Fix Me! Implement DELETE /api/blogs{blogId}/posts/{postId}");
+                ModelState.AddModelError("DeletePost", ex.Message);
                 return BadRequest(ModelState);
             }
           
