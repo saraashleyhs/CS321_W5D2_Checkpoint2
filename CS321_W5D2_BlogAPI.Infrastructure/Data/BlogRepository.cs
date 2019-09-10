@@ -18,7 +18,9 @@ namespace CS321_W5D2_BlogAPI.Infrastructure.Data
 
         public IEnumerable<Blog> GetAll()
         {
-            return _dbContext.Blogs.ToList();
+            return _dbContext.Blogs
+                .Include(b=>b.User)
+                .ToList();
         }
 
         public Blog Get(int id)

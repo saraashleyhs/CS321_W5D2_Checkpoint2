@@ -15,7 +15,7 @@ namespace CS321_W5D2_BlogAPI.ApiModels
                 Id = blog.Id,
                 Name = blog.Name,
                 Description = blog.Description,
-                AuthorName = blog.User.Fullname
+                AuthorName = blog.User?.Fullname
             };
         }
 

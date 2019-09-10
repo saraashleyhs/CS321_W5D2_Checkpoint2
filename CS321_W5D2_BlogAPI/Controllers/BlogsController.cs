@@ -34,7 +34,7 @@ namespace CS321_W5D2_BlogAPI.Controllers
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("GetBlog", ex.Message);
+                ModelState.AddModelError("GetBlogs", ex.Message);
                 return BadRequest(ModelState);
             }
         }
@@ -51,7 +51,7 @@ namespace CS321_W5D2_BlogAPI.Controllers
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("GetBlogs", ex.Message);
+                ModelState.AddModelError("GetBlog", ex.Message);
                 return BadRequest(ModelState);
             }
         }
